@@ -1,3 +1,17 @@
+form {
+  text-align: center;
+}
+.form-control {
+  width: 40%;
+  display: inline;
+}
+.search-box {
+  padding: 57px 35px;
+}
+.results-box {
+  position: relative;
+  left: 400px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
