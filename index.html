@@ -18,37 +18,51 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container">
+    <section>
       <div class="search-box">
-        <h1 class="text-center">IP Address Tracker</h1>
-        <form>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search for any IP address or domain"
-          />
-          <input type="submit" value="Search" />
-        </form>
+        <div>
+          <h1 class="text-center text-light mt-2">IP Address Tracker</h1>
+          <form class="mt-2">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for any IP address or domain"
+            />
+            <!-- <input type="submit" value="Search" /> -->
+            <button></button>
+          </form>
+        </div>
       </div>
-      <div class="results-box d-inline-flex">
-        <div>
-          <h5>IP Address</h5>
-          <p>192.212.174.101</p>
-        </div>
-        <div>
-          <h5>Location</h5>
-          <p>Brooklyn, NY 10001</p>
-        </div>
-        <div>
-          <h5>Timezone</h5>
-          <p>UTC - 05:00</p>
-        </div>
-        <div>
-          <h5>ISP</h5>
-          <p>SpaceX Atarlink</p>
+      <div class="results-box">
+        <div class="container">
+          <div class="result-info">
+            <h5 class="text-uppercase">IP Address</h5>
+            <p>192.212.174.101</p>
+          </div>
+          <div class="line"></div>
+          <div class="result-info">
+            <h5 class="text-uppercase">Location</h5>
+            <p>Brooklyn, NY 10001</p>
+          </div>
+          <div class="line"></div>
+          <div class="result-info">
+            <h5 class="text-uppercase">Timezone</h5>
+            <p>UTC - 05:00</p>
+          </div>
+          <div class="line"></div>
+          <div class="result-info">
+            <h5 class="text-uppercase">ISP</h5>
+            <p>SpaceX Atarlink</p>
+          </div>
         </div>
       </div>
 
@@ -62,6 +76,6 @@
           >. Coded by <a href="#"> Ariola Markou</a>.
         </div>
       </footer>
-    </div>
+    </section>
   </body>
 </html>
