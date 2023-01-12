@@ -25,6 +25,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <section>
@@ -67,7 +78,7 @@
       </div>
 
       <!-- add offset value dynamically using the API -->
-      <div class="map-box"><h6 class="text-center">Map Results</h6></div>
+      <div class="map-box"><div id="map"></div></div>
       <footer>
         <div class="attribution">
           Challenge by
@@ -77,5 +88,6 @@
         </div>
       </footer>
     </section>
+    <script src="src/script.js"></script>
   </body>
 </html>

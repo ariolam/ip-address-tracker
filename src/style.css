@@ -85,10 +85,8 @@ button {
   bottom: 7px;
   opacity: 0.6;
 }
-.map-box {
-  background-color: beige;
-  height: 405px;
-  display: flex;
+#map {
+  height: 320px;
 }
 .attribution {
   font-size: 11px;
