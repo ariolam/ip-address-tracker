@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -36,19 +34,20 @@
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <section>
       <div class="search-box">
         <div>
           <h1 class="text-center text-light mt-2">IP Address Tracker</h1>
-          <form class="mt-2">
+          <form class="mt-2" id="id-form">
             <input
               type="text"
               class="form-control"
-              placeholder="Search for any IP address or domain"
+              placeholder="Search for any IP address"
+              id="search-id-input"
             />
-            <!-- <input type="submit" value="Search" /> -->
             <button></button>
           </form>
         </div>
@@ -57,27 +56,25 @@
         <div class="container">
           <div class="result-info">
             <h5 class="text-uppercase">IP Address</h5>
-            <p>192.212.174.101</p>
+            <p id="ip-address"></p>
           </div>
           <div class="line"></div>
           <div class="result-info">
             <h5 class="text-uppercase">Location</h5>
-            <p>Brooklyn, NY 10001</p>
+            <p id="location"></p>
           </div>
           <div class="line"></div>
           <div class="result-info">
             <h5 class="text-uppercase">Timezone</h5>
-            <p>UTC - 05:00</p>
+            <p id="timezone"></p>
           </div>
           <div class="line"></div>
           <div class="result-info">
             <h5 class="text-uppercase">ISP</h5>
-            <p>SpaceX Atarlink</p>
+            <p id="isp"></p>
           </div>
         </div>
       </div>
-
-      <!-- add offset value dynamically using the API -->
       <div class="map-box"><div id="map"></div></div>
       <footer>
         <div class="attribution">
