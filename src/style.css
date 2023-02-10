@@ -52,6 +52,9 @@ button {
   background-repeat: no-repeat;
   background-position: center;
 }
+button:hover {
+  background-color: #5772d9;
+}
 .search-box {
   background-image: url("../images/pattern-bg.png");
   background-color: #5772d9;
@@ -86,7 +89,7 @@ button {
   opacity: 0.6;
 }
 #map {
-  height: 320px;
+  height: 425px;
 }
 .attribution {
   font-size: 11px;

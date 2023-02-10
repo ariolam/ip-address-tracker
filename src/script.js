@@ -30,10 +30,16 @@ function searchIpAddress(response) {
   }).addTo(map); // call the code
 
   // marker
-  var marker = L.marker([
-    response.data.location.lat,
-    response.data.location.lng,
-  ]).addTo(map);
+  var blackIcon = L.icon({
+    iconUrl: "images/icon-location.svg",
+    iconSize: [33, 55],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+  });
+
+  L.marker([response.data.location.lat, response.data.location.lng], {
+    icon: blackIcon,
+  }).addTo(map);
 }
 // call the IP Address locations
 function showIpLocation(ipAddress) {
