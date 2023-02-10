@@ -3,19 +3,13 @@ function submitIpAddress(event) {
   let input = document.querySelector("#search-id-input");
   showIpLocation(input.value);
 }
-
-let form = document.querySelector("#id-form");
-form.addEventListener("submit", submitIpAddress);
-
 function searchIpAddress(response) {
   //key information and location
   let ipAddressElement = document.querySelector("#ip-address");
   ipAddressElement.innerHTML = response.data.ip;
 
   let locationElement = document.querySelector("#location");
-  const region = response.data.location.region;
-  const city = response.data.location.city;
-  const postalCode = response.data.location.postalCode;
+  const { region, city, postalCode } = response.data.location; // destructuring assignment
   locationElement.innerHTML = `${region},${city}, ${postalCode}`;
 
   let timezoneElement = document.querySelector("#timezone");
@@ -44,7 +38,15 @@ function searchIpAddress(response) {
 // call the IP Address locations
 function showIpLocation(ipAddress) {
   let apiKey = "at_Gg1WndHNKZBjaRtsRDEhzHEPnL7Ms";
-  let apiUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`;
+  let apiUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${
+    ipAddress ?? "" // coalescing
+  }`;
 
   axios.get(apiUrl).then(searchIpAddress);
 }
+
+// main
+showIpLocation();
+
+let form = document.querySelector("#id-form");
+form.addEventListener("submit", submitIpAddress);
